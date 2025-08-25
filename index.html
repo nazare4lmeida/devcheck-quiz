@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevCheck - Questionário de Nivelamento</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="quiz-container">
+      <section id="homepage" class="quiz-section active">
+        <h1>DevCheck - Nível Dev</h1>
+        <p>
+          Descubra o seu nível de conhecimento em programação com o nosso quiz
+          interativo! Responda a 10 perguntas cuidadosamente selecionadas para
+          avaliar suas habilidades em lógica de programação, JavaScript e
+          fundamentos da computação.
+        </p>
+        <button id="iniciar-quiz">Iniciar Quiz</button>
+      </section>
+
+      <section id="cadastro" class="quiz-section">
+        <h2>Faça seu Cadastro</h2>
+        <form id="cadastro-form">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+
+          <button type="submit">Começar Quiz</button>
+        </form>
+      </section>
+
+      <section id="quiz" class="quiz-section">
+        <h2>Quiz de Nivelamento</h2>
+        <div id="questoes-container"></div>
+        <div class="proxima-questao-container">
+          <button id="proxima-questao">Próxima</button>
+        </div>
+      </section>
+
+      <section id="resultado" class="quiz-section">
+        <h2>Resultado do seu Teste</h2>
+        <div id="nivel-resultado-final"></div>
+        <div id="analise-final"></div>
+
+        <button id="voltar-homepage">Voltar à Homepage</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
