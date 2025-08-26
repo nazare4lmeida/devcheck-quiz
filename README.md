@@ -2,13 +2,13 @@
 
 ---
 
-### :notebook_with_decorative_cover: Sobre o Projeto: 
+### 💻 Sobre o Projeto: 
 
 O **DevCheck** é um quiz interativo de nivelamento, criado para ajudar iniciantes e estudantes de programação a avaliarem seus conhecimentos em tópicos essenciais. Com perguntas sobre **Lógica de Programação**, **Fundamentos de Computação** e **JavaScript**, o quiz fornece um feedback detalhado e personalizado, indicando o nível do usuário (Iniciante, Intermediário ou Expert) e sugerindo os próximos passos para a sua jornada de aprendizado.
 
 ---
 
-### Funcionalidades:
+### 💡 Funcionalidades:
 
 * **Quiz Interativo:** Responda a 10 perguntas de múltipla escolha com uma interface limpa e intuitiva.
 * **Feedback Imediato:** Receba correções e explicações detalhadas imediatamente após cada resposta.
@@ -18,7 +18,7 @@ O **DevCheck** é um quiz interativo de nivelamento, criado para ajudar iniciant
 
 ---
 
-### Tecnologias Utilizadas
+### 🖥️ Tecnologias Utilizadas
 
 Este projeto foi construído inteiramente com **Frontend**, utilizando:
 
@@ -29,7 +29,7 @@ Este projeto foi construído inteiramente com **Frontend**, utilizando:
 
 ---
 
-### Como Usar:
+### 🚀 Como Usar:
 
 1.  Acesse o quiz através deste link: `https://nazare4lmeida.github.io/devcheck-quiz/`
 2.  Preencha o formulário com seu nome e e-mail.
@@ -38,7 +38,7 @@ Este projeto foi construído inteiramente com **Frontend**, utilizando:
 
 ---
 
-###  Contribuição:
+### 🤝 Contribuição:
 
 Contribuições são sempre bem-vindas! Se você tiver sugestões de melhorias, novas perguntas ou correções, sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
 
