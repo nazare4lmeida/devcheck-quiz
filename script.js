@@ -1,7 +1,7 @@
 const FORM_ID = "1FAIpQLSdGlPosYvYxYGk5IC9EV_gxQhTgjz9rXRqN5V9mMhPShU4-JA";
 const FORM_URL = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
 
-// Perguntas do Quiz, agora com categorias
+// Perguntas do Quiz, com as devidas categorias
 const perguntas = [
     {
         categoria: "Lógica de Programação",
@@ -217,7 +217,7 @@ function handleResposta(inputSelecionado) {
         <p>${opcao.explicacao}</p>
     `;
 
-    // Aplica a classe de cor na opção selecionada
+    // Const para aplicar a classe de cor na opção selecionada
     const labelSelecionada = inputSelecionado.parentElement;
     labelSelecionada.classList.add(respostaCorreta ? "correta" : "incorreta");
 
