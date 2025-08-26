@@ -298,3 +298,46 @@ body {
 #voltar-homepage:hover {
   background-color: var(--teal-dark);
 }
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+    word-wrap: break-word;
+  }
+
+  .opcoes {
+    gap: 10px;
+  }
+
+  .opcoes label {
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  #proxima-questao,
+  #voltar-homepage {
+    text-align: center;
+  }
+
+  .feedback-questao {
+    padding: 12px;
+  }
+}
