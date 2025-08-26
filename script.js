@@ -1,7 +1,7 @@
 const FORM_ID = "1FAIpQLSdGlPosYvYxYGk5IC9EV_gxQhTgjz9rXRqN5V9mMhPShU4-JA";
 const FORM_URL = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
 
-// Perguntas do Quiz, agora com categorias
+//Perguntas do Quiz, com as devidas categorias
 const perguntas = [
   {
     categoria: "Lógica de Programação",
@@ -311,35 +311,75 @@ cadastroForm.addEventListener("submit", (e) => {
 
 // Função para exibir uma questão específica
 function exibirQuestao() {
-  const questao = perguntas[indiceQuestaoAtual];
-  questoesContainer.innerHTML = `
+    const questao = perguntas[indiceQuestaoAtual];
+    questoesContainer.innerHTML = `
         <div class="questao">
             <h3>${indiceQuestaoAtual + 1}. ${questao.pergunta}</h3>
             <div class="opcoes">
                 ${questao.opcoes
-                  .map(
-                    (opcao, index) => `
+                    .map(
+                        (opcao, index) => `
                     <label>
                         <input type="radio" name="opcao" value="${opcao.texto}" data-correta="${opcao.correta}">
                         <span>${opcao.texto}</span>
                     </label>
                 `
-                  )
-                  .join("")}
+                    )
+                    .join("")}
             </div>
         </div>
         <div id="feedback-questao"></div>
     `;
 
-  document.querySelectorAll('input[name="opcao"]').forEach((input) => {
-    input.addEventListener(
-      "click",
-      () => {
-        handleResposta(input);
-      },
-      { once: true }
-    );
-  });
+    document.querySelectorAll('input[name="opcao"]').forEach((input) => {
+        input.addEventListener(
+            "click",
+            () => {
+                handleResposta(input);
+            },
+            { once: true }
+        );
+    });
+}
+
+// Função para tratar a resposta do usuário
+function handleResposta(inputSelecionado) {
+    const opcaoSelecionada = inputSelecionado.value;
+    const questao = perguntas[indiceQuestaoAtual];
+    const opcao = questao.opcoes.find((o) => o.texto === opcaoSelecionada);
+    const feedbackQuestaoDiv = document.getElementById("feedback-questao");
+
+    const respostaCorreta = opcao.correta;
+    if (respostaCorreta) {
+        pontuacao++;
+    }
+
+    respostasUsuario.push({
+        pergunta: questao.pergunta,
+        categoria: questao.categoria,
+        correta: respostaCorreta,
+        explicacao: opcao.explicacao,
+    });
+
+    feedbackQuestaoDiv.className = `feedback-questao ${
+        respostaCorreta ? "correta" : "incorreta"
+    }`;
+    feedbackQuestaoDiv.innerHTML = `
+        <p><strong>Resposta ${
+            respostaCorreta ? "Correta!" : "Incorreta."
+        }</strong></p>
+        <p>${opcao.explicacao}</p>
+    `;
+
+    // Aplica a classe de cor na opção selecionada
+    const labelSelecionada = inputSelecionado.parentElement;
+    labelSelecionada.classList.add(respostaCorreta ? "correta" : "incorreta");
+
+    document.querySelectorAll('input[name="opcao"]').forEach((input) => {
+        input.disabled = true;
+    });
+
+    proximaQuestaoBtn.style.display = "block";
 }
 
 // Função para tratar a resposta do usuário

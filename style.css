@@ -1,18 +1,12 @@
 :root {
+    --crimson: #88051f;
+    --seagreen: #2E8B57;
     --teal-dark: #008080;
     --teal-medium: #20B2AA;
-    --teal-light: #AFEEEE;
-    --seagreen-dark: #2E8B57;
-    --seagreen-medium: #3CB371;
-    --gray-dark: #696969;
-    --gray-medium: #A9A9A9;
-    --gray-light: #D3D3D3;
+    --teal-light: #124949;
+    --gray-dark: #f5eded;
+    --gray-medium: #1c7777;
     --white: #FFFFFF;
-    --accent-color: var(--seagreen-medium);
-    --correct-bg: #e5f4e5; /* Verde claro para acertos */
-    --correct-border: var(--seagreen-medium);
-    --incorrect-bg: #fbebeb; /* Vermelho claro para erros */
-    --incorrect-border: #d9534f; /* Vermelho mais escuro */
 }
 
 * {
@@ -23,8 +17,11 @@
 }
 
 body {
-    background-color: var(--gray-light);
-    color: var(--gray-dark);
+    background-image: url('imagem-de-fundo.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--gray-medium);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +65,7 @@ body {
 }
 
 #homepage button {
-    background-color: var(--accent-color);
+    background-color: var(--seagreen);
     color: var(--white);
     border: none;
     padding: 15px 40px;
@@ -79,7 +76,7 @@ body {
 }
 
 #homepage button:hover {
-    background-color: var(--seagreen-dark);
+    background-color: var(--teal-dark);
 }
 
 #nivel-resultado-homepage {
@@ -99,7 +96,7 @@ body {
 #cadastro-form label {
     text-align: left;
     font-weight: bold;
-    color: var(--teal-dark);
+    color: var(--gray-medium);
 }
 
 #cadastro-form input {
@@ -138,11 +135,12 @@ body {
     padding: 20px;
     background-color: var(--teal-light);
     border-radius: 10px;
+    color: var(--white);
 }
 
 .questao h3 {
     font-size: 1.6rem;
-    color: var(--teal-dark);
+    color: var(--gray-dark);
     margin-bottom: 15px;
 }
 
@@ -154,18 +152,20 @@ body {
 }
 
 .opcoes label {
-    background-color: var(--white);
+    background-color: var(--teal-medium);
+    color: var(--white);
     padding: 15px;
     border-radius: 8px;
-    border: 1px solid var(--gray-medium);
+    border: 1px solid var(--teal-medium);
     cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     display: block;
 }
 
 .opcoes label:hover {
-    background-color: var(--teal-light);
-    border-color: var(--teal-medium);
+    background-color: var(--white);
+    color: var(--gray-medium);
+    border-color: var(--gray-medium);
 }
 
 .opcoes input[type="radio"] {
@@ -174,7 +174,30 @@ body {
 
 .opcoes input[type="radio"]:checked + span {
     font-weight: bold;
-    color: var(--seagreen-dark);
+    color: var(--white);
+}
+
+/* Cores de feedback nas opções */
+.opcoes .correta {
+    background-color: var(--seagreen);
+    color: var(--white);
+    border: 1px solid var(--seagreen);
+}
+
+.opcoes .correta:hover {
+    background-color: var(--seagreen);
+    color: var(--white);
+}
+
+.opcoes .incorreta {
+    background-color: var(--crimson);
+    color: var(--white);
+    border: 1px solid var(--crimson);
+}
+
+.opcoes .incorreta:hover {
+    background-color: var(--crimson);
+    color: var(--white);
 }
 
 .proxima-questao-container {
@@ -183,7 +206,7 @@ body {
 }
 
 #proxima-questao {
-    background-color: var(--seagreen-medium);
+    background-color: var(--seagreen);
     color: var(--white);
     border: none;
     padding: 12px 30px;
@@ -195,7 +218,7 @@ body {
 }
 
 #proxima-questao:hover {
-    background-color: var(--seagreen-dark);
+    background-color: var(--teal-dark);
 }
 
 /* Feedback per question */
@@ -206,15 +229,15 @@ body {
 }
 
 .feedback-questao.correta {
-    background-color: var(--correct-bg);
-    border: 1px solid var(--correct-border);
-    color: var(--seagreen-dark);
+    background-color: var(--seagreen);
+    border: 1px solid var(--seagreen);
+    color: var(--white);
 }
 
 .feedback-questao.incorreta {
-    background-color: var(--incorrect-bg);
-    border: 1px solid var(--incorrect-border);
-    color: #922020;
+    background-color: var(--crimson);
+    border: 1px solid var(--crimson);
+    color: var(--white);
 }
 
 /* Resultado Styles */
@@ -223,7 +246,7 @@ body {
 }
 
 #resultado h2 {
-    color: var(--seagreen-dark);
+    color: var(--teal-dark);
     font-size: 3rem;
     margin-bottom: 20px;
 }
@@ -241,8 +264,13 @@ body {
 }
 
 #nivel-resultado-final p, #analise-final p {
+    color: var(--gray-medium);
     font-size: 1.1rem;
     line-height: 1.6;
+}
+
+#analise-final p strong {
+    color: var(--teal-dark);
 }
 
 #voltar-homepage {
