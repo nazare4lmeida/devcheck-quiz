@@ -4,7 +4,7 @@
 
 ### 💻 Sobre o Projeto: 
 
-O **DevCheck** é um quiz interativo de nivelamento, criado para ajudar iniciantes e estudantes de programação a avaliarem seus conhecimentos em tópicos essenciais. Com perguntas sobre **Lógica de Programação**, **Fundamentos de Computação** e **JavaScript**, o quiz fornece um feedback detalhado e personalizado, indicando o nível do usuário (Iniciante, Intermediário ou Expert) e sugerindo os próximos passos para a sua jornada de aprendizado.
+O **DevCheck** é um quiz interativo de nivelamento, criado para ajudar iniciantes e estudantes de programação a avaliarem seus conhecimentos em tópicos essenciais. Com perguntas sobre **Lógica de Programação**, **Fundamentos de Computação** e **JavaScript**, o quiz fornece um feedback detalhado e personalizado, indicando o nível do usuário (Iniciante, Intermediário ou Expert) e sugerindo os próximos passos para a sua jornada de aprendizado, além de pontos de melhoria e pontos fortes.
 
 ---
 
